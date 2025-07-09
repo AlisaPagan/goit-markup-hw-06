@@ -26,17 +26,6 @@
     <!-- header -->
 
     <header class="top">
-      <div class="mobile-header">
-        <a href="./index.html" class="logo"
-          >Web<span class="logo-end">Studio</span></a
-        >
-        <button type="button" class="mobile-menu-toggle">
-          <svg class="mobile-menu-icon" width="16" height="14">
-            <use href="./images/icons.svg#hamburger-icon"></use>
-          </svg>
-        </button>
-      </div>
-      <!-- header with nav-->
       <div class="header container">
         <nav class="header-navigation">
           <a href="./index.html" class="logo"
@@ -56,7 +45,11 @@
             </li>
           </ul>
         </nav>
-
+        <button type="button" class="mobile-menu-toggle">
+          <svg class="mobile-menu-icon" width="16" height="14">
+            <use href="./images/icons.svg#hamburger-icon"></use>
+          </svg>
+        </button>
         <address class="nav-contacts">
           <ul class="contacts-list">
             <li>
@@ -82,7 +75,7 @@
           </svg>
         </button>
         <nav class="header-navigation">
-          <ul class="navigation-menu">
+          <ul class="navigation-menu mobile-nav">
             <li>
               <a href="./index.html" class="navigation-link">Studio</a>
             </li>
@@ -95,7 +88,7 @@
               <a href="" class="navigation-link">Contacts</a>
             </li>
           </ul>
-          <address class="nav-contacts">
+          <address class="nav-contacts mobile-contacts">
             <ul class="contacts-list">
               <li>
                 <a href="mailto:info@devstudio.com" class="address-link"
@@ -242,6 +235,10 @@
             <li class="team-member">
               <img
                 src="./images/mark-guerrero.jpg"
+                srcset="
+                  ./images/mark-guerrero.jpg    1x,
+                  ./images/mark-guerrero@2x.jpg 2x
+                "
                 alt="Mark Guerrero, Product Designer"
               />
 
@@ -300,6 +297,7 @@
             <li class="team-member">
               <img
                 src="./images/tom-ford.jpg"
+                srcset="./images/tom-ford.jpg 1x, ./images/tom-ford@2x.jpg 2x"
                 alt="Tom Ford, Frontend Developer"
               />
 
@@ -358,6 +356,10 @@
             <li class="team-member">
               <img
                 src="./images/camila-garcia.jpg"
+                srcset="
+                  ./images/camila-garcia.jpg    1x,
+                  ./images/camila-garcia@2x.jpg 2x
+                "
                 alt="Camila Garcia, Marketing"
               />
 
@@ -416,6 +418,10 @@
             <li class="team-member">
               <img
                 src="./images/daniel-wilson.jpg"
+                srcset="
+                  ./images/daniel-wilson.jpg    1x,
+                  ./images/daniel-wilson@2x.jpg 2x
+                "
                 alt="Daniel Wilson, UI Designer"
               />
 
@@ -482,7 +488,14 @@
           <ul class="projects">
             <li class="project-card">
               <div class="project-img">
-                <img src="./images/bankng-app.jpg" alt="Banking app mockup" />
+                <img
+                  src="./images/bankng-app.jpg"
+                  srcset="
+                    ./images/bankng-app.jpg    1x,
+                    ./images/bankng-app@2x.jpg 2x
+                  "
+                  alt="Banking app mockup"
+                />
                 <p class="project-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -500,6 +513,10 @@
               <div class="project-img">
                 <img
                   src="./images/cashless-payment.jpg"
+                  srcset="
+                    ./images/cashless-payment.jpg    1x,
+                    ./images/cashless-payment@2x.jpg 2x
+                  "
                   alt="Cashless Payment Mockup"
                 />
                 <p class="project-overlay">
@@ -519,6 +536,10 @@
               <div class="project-img">
                 <img
                   src="./images/mediation-app.jpg"
+                  srcset="
+                    ./images/mediation-app.jpg    1x,
+                    ./images/mediation-app@2x.jpg 2x
+                  "
                   alt="Meditation App Mockup"
                 />
                 <p class="project-overlay">
@@ -536,7 +557,14 @@
 
             <li class="project-card">
               <div class="project-img">
-                <img src="./images/taxi-service.jpg" alt="Taxi Service" />
+                <img
+                  src="./images/taxi-service.jpg"
+                  srcset="
+                    ./images/taxi-service.jpg    1x,
+                    ./images/taxi-service@2x.jpg 2x
+                  "
+                  alt="Taxi Service"
+                />
                 <p class="project-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -554,6 +582,10 @@
               <div class="project-img">
                 <img
                   src="./images/screen-illustrations.jpg"
+                  srcset="
+                    ./images/screen-illustrations.jpg    1x,
+                    ./images/screen-illustrations@2x.jpg 2x
+                  "
                   alt="Screen Illustrations mockup"
                 />
                 <p class="project-overlay">
@@ -757,8 +789,10 @@
                 <svg class="checkbox-icon" width="10" height="8">
                   <use href="./images/icons.svg#checkbox-icon"></use>
                 </svg> </span
-              >I accept the terms and conditions of the
-              <a class="privacy-link" href="#">Privacy Policy</a>
+              ><span
+                >I accept the terms and conditions of the
+                <a class="privacy-link" href="#">Privacy Policy</a></span
+              >
             </label>
           </div>
 
