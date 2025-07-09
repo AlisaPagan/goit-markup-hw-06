@@ -160,6 +160,7 @@ img {
   opacity: 0;
   pointer-events: none;
   background-color: #ffffff;
+  z-index: 999;
 }
 
 .mobile-menu-wrapper.is-open {
@@ -781,12 +782,16 @@ input[type="checkbox"]:checked ~ label .custom-checkbox {
 /* =====TABLET STYLES===== */
 
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
   /* =====header===== */
 
+  .top .mobile-menu-wrapper,
   .mobile-menu-toggle {
     display: none;
   }
-
   .top {
     padding: 0;
     position: inherit;
@@ -943,7 +948,7 @@ input[type="checkbox"]:checked ~ label .custom-checkbox {
   .bottom .container {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: baseline;
+    justify-content: flex-start;
     align-items: flex-start;
     column-gap: 24px;
     row-gap: 72px;
@@ -1024,6 +1029,7 @@ input[type="checkbox"]:checked ~ label .custom-checkbox {
       url(../images/people-office.jpg);
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 1440px;
   }
 
   .hero .container {
@@ -1108,9 +1114,5 @@ input[type="checkbox"]:checked ~ label .custom-checkbox {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/people-office@2x.jpg);
-
-    padding-top: 188px;
-    padding-bottom: 188px;
-    max-width: 1440px;
   }
 }
